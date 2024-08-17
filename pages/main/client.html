@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Clientes</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Bootstrap 3.3.7 -->
+    <link
+      rel="stylesheet"
+      href="./../../bower_components/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./../../bower_components/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="./../../bower_components/Ionicons/css/ionicons.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./../../dist/css/AdminLTE.min.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="./../../dist/css/skins/_all-skins.min.css" />
+
+    <!-- Google Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"
+    />
+    <link rel="stylesheet" href="./../../dist/css/home.custom.css" />
+    <link rel="stylesheet" href="./../../dist/css/calendarRange.css" />
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>A</b>LT</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a
+            href="#"
+            class="sidebar-toggle"
+            data-toggle="push-menu"
+            role="button"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+                <a href="#" data-toggle="control-sidebar"
+                  ><i class="fa fa-gears"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- =============================================== -->
+
+      <!-- Left side column. contains the sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img
+                src="./../../dist/img/user2-160x160.jpg"
+                class="img-circle"
+                alt="User Image"
+              />
+            </div>
+            <div class="pull-left info">
+              <p id="name-user"></p>
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+
+            <!-- <li>
+              <a href="home.html">
+                <i class="fa fa-dashboard"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="service.html">
+                <i class="fa fa-wrench"></i>
+                <span>Service</span>
+              </a>
+            </li>
+            <li>
+              <a class="active-main" href="client.html">
+                <i class="fa fa-user"></i>
+                <span>Cliente</span>
+              </a>
+            </li>
+            <li>
+              <a href="expense.html">
+                <i class="fa fa-money"></i>
+                <span>Finanzas</span>
+              </a>
+            </li>
+            <li>
+              <a href="var.html">
+                <i class="fa fa-cogs"></i>
+                <span>Variables</span>
+              </a>
+            </li> -->
+            <li>
+              <a href="javascript:void(0);" onclick="logout()">
+                <i class="fa fa-cogs"></i>
+                <span>Cerrar Sesion</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- =============================================== -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content contentBox">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                  <h3 class="clients">0<sup style="font-size: 20px">#</sup></h3>
+                  <p>CLIENTES</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-users"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-aqua">
+                <div class="inner">
+                  <h3 class="confirmed">
+                    0<sup style="font-size: 20px">#</sup>
+                  </h3>
+                  <p>POR CONFIRMAR</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-yellow">
+                <div class="inner">
+                  <h3 class="in-wait">0<sup style="font-size: 20px">#</sup></h3>
+                  <p>POR REALIZAR</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-tasks"></i>
+                </div>
+              </div>
+            </div>
+            <!-- ./col -->
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-green">
+                <div class="inner">
+                  <h3 class="pay">0<sup style="font-size: 20px">#</sup></h3>
+                  <p>POR PAGAR</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-credit-card"></i>
+                </div>
+              </div>
+            </div>
+            <!-- ./col -->
+          </div>
+        </section>
+        <!-- /.content -->
+
+        <!-- TABLE  -->
+        <div class="container">
+          <h3 class="title-table">Clientes</h3>
+          <div class="filters">
+            <input type="text" id="search" placeholder="Buscar..." />
+            <div class="date-picker">
+              <input type="date" id="start-date" name="start-date" />
+            </div>
+            <div class="date-picker">
+              <input type="date" id="end-date" name="end-date" />
+            </div>
+            <button class="submit-btn">Consultar</button>
+            <button id="open-create-popup" class="btn-submit">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="table-container">
+            <table id="client-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Teléfono</th>
+                  <th>Dirección</th>
+                  <th>Genero</th>
+                  <th>Estado</th>
+                  <th>Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Los datos se llenarán aquí con JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination" id="pagination">
+            <button id="prev">Anterior</button>
+            <div id="page-numbers"></div>
+            <button id="next">Siguiente</button>
+          </div>
+        </div>
+
+        <!-- modal edit  -->
+
+        <div id="edit-popup" class="modal">
+          <div class="modal-content">
+            <div class="header-pop-up">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <h2>Editar Cliente</h2>
+            </div>
+
+            <form id="edit-form" class="container-inputs">
+              <div class="container-inputs">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="full_name">Nombre Completo:</label>
+                    <input
+                      type="text"
+                      id="full_name"
+                      name="full_name"
+                      class="form-control"
+                      placeholder="Ingrese nombres y apellidos"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="number_phone_1">Número de Teléfono 1:</label>
+                    <input
+                      type="number"
+                      id="number_phone_1"
+                      name="number_phone_1"
+                      class="form-control"
+                      minlength="7"
+                      maxlength="9"
+                      required
+                      placeholder="Ingrese número de teléfono"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="gender_id">Género:</label>
+                    <select
+                      id="gender_id_edit"
+                      name="gender_id"
+                      class="form-control"
+                      required
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      class="form-control"
+                      placeholder="Dirección"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="btn-opt-pop-up footer-pop-up">
+                <button type="button" class="btn-closet" onclick="closePopup()">
+                  <i class="fa fa-times" aria-hidden="true"></i> &nbsp; Cerrar
+                </button>
+                <button type="submit" class="btn-submit">
+                  <i class="fa fa-save" aria-hidden="true"></i> &nbsp; Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- crear  -->
+        <!-- Modal de Creación -->
+        <div id="create-popup" class="modal">
+          <div class="modal-content">
+            <div class="header-pop-up">
+              <span class="close" onclick="closeCreatePopup()">&times;</span>
+              <h2>Crear Cliente</h2>
+            </div>
+            <form id="create-form">
+              <div class="container-inputs">
+                <div class="form-group">
+                  <label for="full_name">Nombre Completo:</label>
+                  <input
+                    type="text"
+                    id="full_name"
+                    name="full_name"
+                    class="form-control"
+                    minlength="3"
+                    required
+                    placeholder="Ingrese nombres y apellidos"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="gender_id">Género:</label>
+                  <select
+                    id="gender_id"
+                    name="gender_id"
+                    class="form-control"
+                    required
+                  >
+                    <option value="gender">Género</option>
+                    <!-- Más opciones pueden ser agregadas aquí -->
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="address">Dirección:</label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    class="form-control"
+                    minlength="8"
+                    required
+                    placeholder="Ingrese dirección"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="number_phone_1">Número de Teléfono 1:</label>
+                  <input
+                    type="number"
+                    id="number_phone_1"
+                    name="number_phone_1"
+                    class="form-control"
+                    minlength="7"
+                    maxlength="9"
+                    required
+                    placeholder="Ingrese número de teléfono"
+                  />
+                </div>
+              </div>
+              <div class="container-button-create-user footer-pop-up">
+                <button type="submit" class="btn-submit">
+                  <i class="fa fa-plus" aria-hidden="true"></i>&nbsp; Crear
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="toast-container"></div>
+      </div>
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs"><b>Version</b> 2.4.18</div>
+        <strong
+          >Copyright &copy; 2014-2019
+          <a href="https://adminlte.io">AdminLTE</a>.</strong
+        >
+        All rights reserved.
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+    <script src="./../../dist/js/routes.js"></script>
+
+    <script src="./../../dist/js/custom.js"></script>
+
+    <script src="./../../dist/js/login.custom.js"></script>
+    <!-- jQuery 3 -->
+    <script src="./../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="./../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="./../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="./../../bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="./../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="./../../dist/js/demo.js"></script>
+    <script src="./../../dist/js/client.custom.js" defer></script>
+
+    <script>
+      //  codigo js directo
+    </script>
+  </body>
+</html>

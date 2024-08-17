@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Inicio</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Bootstrap 3.3.7 -->
+    <link
+      rel="stylesheet"
+      href="./../../bower_components/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./../../bower_components/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="./../../bower_components/Ionicons/css/ionicons.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./../../dist/css/AdminLTE.min.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="./../../dist/css/skins/_all-skins.min.css" />
+
+    <!-- Google Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"
+    />
+    <!-- calendar  -->
+    <link
+      href="https://unpkg.com/@fullcalendar/core/main.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/@fullcalendar/daygrid/main.css"
+      rel="stylesheet"
+    />
+    <!-- css custom -->
+    <link rel="stylesheet" href="./../../dist/css/home.custom.css" />
+    <link rel="stylesheet" href="./../../dist/css/calendarRange.css" />
+    <link rel="stylesheet" href="./../../dist/css/calender.custom.css" />
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>A</b>LT</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a
+            href="#"
+            class="sidebar-toggle"
+            data-toggle="push-menu"
+            role="button"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Control Sidebar Toggle Button -->
+              <!-- <li>
+                <a href="#" data-toggle="control-sidebar"
+                  ><i class="fa fa-gears"></i
+                ></a>
+              </li> -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- =============================================== -->
+
+      <!-- Left side column. contains the sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img
+                src="./../../dist/img/user2-160x160.jpg"
+                class="img-circle"
+                alt="User Image"
+              />
+            </div>
+            <div class="pull-left info">
+              <p id="name-user"></p>
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+
+            <!-- <li>
+              <a class="active-main" href="home.html">
+                <i class="fa fa-dashboard"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="service.html">
+                <i class="fa fa-wrench"></i>
+                <span>Service</span>
+              </a>
+            </li>
+            <li>
+              <a href="client.html">
+                <i class="fa fa-user"></i>
+                <span>Cliente</span>
+              </a>
+            </li>
+            <li>
+              <a href="expense.html">
+                <i class="fa fa-money"></i>
+                <span>Finanzas</span>
+              </a>
+            </li>
+            <li>
+              <a href="var.html">
+                <i class="fa fa-cogs"></i>
+                <span>Variables</span>
+              </a>
+            </li> -->
+            <li>
+              <a href="javascript:void(0);" onclick="logout()">
+                <i class="fa fa-cogs"></i>
+                <span>Cerrar Sesion</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- =============================================== -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper pb-1">
+        <!-- Main content -->
+        <section class="content contentBox">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                  <h3 class="confirmar">
+                    0<sup style="font-size: 20px">#</sup>
+                  </h3>
+                  <p>POR CONFIRMAR</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-exclamation-triangle"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-aqua">
+                <div class="inner">
+                  <h3 class="realizar">
+                    0<sup style="font-size: 20px">#</sup>
+                  </h3>
+                  <p>POR REALIZAR</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-tasks"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-yellow">
+                <div class="inner">
+                  <h3 class="egreso">0<sup style="font-size: 20px">$</sup></h3>
+                  <p>EGRESOS</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-minus-circle"></i>
+                </div>
+              </div>
+            </div>
+            <!-- ./col -->
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-green">
+                <div class="inner">
+                  <h3 class="ingreso">0<sup style="font-size: 20px">$</sup></h3>
+                  <p>INGRESOS</p>
+                </div>
+                <div class="icon">
+                  <i class="fa fa-plus-circle"></i>
+                </div>
+              </div>
+            </div>
+            <!-- ./col -->
+          </div>
+        </section>
+        <!-- /.content -->
+        <!-- create ticket -->
+        <div id="create-event-modal" class="modal">
+          <div class="modal-content">
+            <div class="header-pop-up">
+              <span class="close" onclick="closeCreatePopup()">&times;</span>
+              <h2>Crear Ticket</h2>
+            </div>
+
+            <form id="create-form-event" class="container-inputs">
+              <div class="container-inputs">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="full_name">Cliente:</label>
+                    <input
+                      type="text"
+                      id="full_name_create"
+                      name="full_name"
+                      class="form-control"
+                      placeholder="Nombre del cliente"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="service_id">Servicio:</label>
+                    <select
+                      id="service_id_create"
+                      name="service_id"
+                      class="form-control"
+                      required
+                    ></select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <input
+                      type="text"
+                      id="address_create"
+                      name="address"
+                      class="form-control"
+                      placeholder="Dirección del cliente"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="technical_id">Tecnico:</label>
+                    <select
+                      id="technical_id_create"
+                      name="technical_id"
+                      class="form-control"
+                    ></select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="client_number_phone_1">Teléfono Cliente:</label>
+                    <input
+                      type="number"
+                      id="client_number_phone_1_create"
+                      name="client_number_phone_1"
+                      class="form-control"
+                      placeholder="Número del cliente"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Fecha:</label>
+                    <input
+                      type="date"
+                      id="date_create"
+                      name="date"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="hour">Hora:</label>
+                    <input
+                      type="time"
+                      id="hour_create"
+                      name="hour"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Descripción:</label>
+                    <input
+                      type="text"
+                      id="description_create"
+                      name="description"
+                      class="form-control"
+                      placeholder="Descripción del servicio"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="type_payment_id">Metodo de pago:</label>
+                    <select
+                      id="type_payment_id_create"
+                      name="type_payment_id"
+                      class="form-control"
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="status_payment_id">Estado del Pago:</label>
+                    <select
+                      id="status_payment_id_create"
+                      name="status_payment_id"
+                      class="form-control"
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="amount">Monto:</label>
+                    <input
+                      type="text"
+                      id="amount_create"
+                      name="amount"
+                      class="form-control"
+                      placeholder="Cantidad"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="service_status_id">Estado del Servicio:</label>
+                    <select
+                      id="service_status_id_create"
+                      name="service_status_id"
+                      class="form-control"
+                      required
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="gender_id">Genero del cliente:</label>
+                    <select
+                      id="gender_id_create"
+                      name="gender_id"
+                      class="form-control"
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="how_long">Duración:</label>
+                    <input
+                      type="text"
+                      id="how_long_create"
+                      name="how_long"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="home_appliances">Electrodomésticos:</label>
+                  <div id="home_appliances_container" class="grid-checkboxes">
+                    <!-- Checkboxes will be populated here -->
+                  </div>
+                </div>
+              </div>
+              <div class="btn-opt-pop-up footer-pop-up">
+                <button type="submit" class="btn-submit">
+                  <i class="fa fa-plus" aria-hidden="true"></i>&nbsp; Crear
+                </button>
+                <!-- <button
+                  type="button"
+                  class="btn-closet"
+                  onclick="closeCreatePopup()"
+                >
+                  Cerrar
+                </button> -->
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="history-container mb-2">
+          <h2>Historial de Eventos</h2>
+          <ul class="history-list">
+            <li class="history-item confirmed">
+              <span class="color-box"></span>
+              <span class="label">Por Confirmado</span>
+            </li>
+            <li class="history-item wait">
+              <span class="color-box"></span>
+              <span class="label">Por Realizar</span>
+            </li>
+            <li class="history-item done-not-pay">
+              <span class="color-box"></span>
+              <span class="label">Completado Sin Pago</span>
+            </li>
+            <li class="history-item pay">
+              <span class="color-box"></span>
+              <span class="label">Pago Pendiente</span>
+            </li>
+
+            <li class="history-item done">
+              <span class="color-box"></span>
+              <span class="label">Completado Con Pago</span>
+            </li>
+            <li class="history-item canceled">
+              <span class="color-box"></span>
+              <span class="label">Cancelado</span>
+            </li>
+          </ul>
+        </div>
+        <div class="container mb-2">
+          <!-- CALENDAR -->
+          <div class="container-button-create-ticket">
+            <button onclick="openCreatePopup()" class="create-ticket-button">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div id="calendar-container">
+            <div id="calendar-header">
+              <button id="prev-month">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </button>
+              <span id="month-year"></span>
+              <button id="next-month">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div id="calendar"></div>
+          </div>
+
+          <div id="event-modal" class="modal">
+            <div class="modal-content">
+              <div class="header-pop-up">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Editar Ticket <span id="ticket_id"></span></h2>
+              </div>
+
+              <form id="edit-form-event" class="container-inputs">
+                <div class="container-inputs">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="client_id">Cliente:</label>
+                      <input
+                        type="text"
+                        id="client_id_evet"
+                        name="client_id"
+                        class="form-control"
+                        placeholder="Nombre del cliente"
+                        readonly
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="service_id">Servicio:</label>
+                      <select
+                        id="service_id_evet"
+                        name="service_id"
+                        class="form-control"
+                        required
+                      ></select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="address">Dirección:</label>
+                      <input
+                        type="text"
+                        id="address_evet"
+                        name="address"
+                        class="form-control"
+                        placeholder="Descripción del servicio"
+                        readonly
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="technical_id">Tecnico:</label>
+                      <select
+                        id="technical_id_evet"
+                        name="technical_id"
+                        class="form-control"
+                        required
+                      ></select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="client_number_phone_1"
+                        >Teléfono Cliente:</label
+                      >
+                      <input
+                        type="number"
+                        id="client_number_phone_1_evet"
+                        name="client_number_phone_1"
+                        class="form-control"
+                        placeholder="Número del cliente"
+                        readonly
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Fecha:</label>
+                      <input
+                        type="date"
+                        id="date_evet"
+                        name="date"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="technical_number_phone_1"
+                        >Teléfono Tecnico:</label
+                      >
+                      <input
+                        type="number"
+                        id="technical_number_phone_1_evet"
+                        name="technical_number_phone_1"
+                        class="form-control"
+                        placeholder="Número del tecnico"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="hour">Hora:</label>
+                      <input
+                        type="time"
+                        id="hour_evet"
+                        name="hour"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="type_payment_id">Metodo de pago:</label>
+                      <select
+                        id="type_payment_id_evet"
+                        name="type_payment_id"
+                        class="form-control"
+                      >
+                        <!-- Opciones cargadas dinámicamente -->
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="status_payment_id">Estado del Pago:</label>
+                      <select
+                        id="status_payment_id_evet"
+                        name="status_payment_id"
+                        class="form-control"
+                      >
+                        <!-- Opciones cargadas dinámicamente -->
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="amount">Monto:</label>
+                      <input
+                        type="text"
+                        id="amount_evet"
+                        name="amount"
+                        class="form-control"
+                        placeholder="Cantidad"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="service_status_id"
+                        >Estado del Servicio:</label
+                      >
+                      <select
+                        id="service_status_id_evet"
+                        name="service_status_id"
+                        class="form-control"
+                      >
+                        <!-- Opciones cargadas dinámicamente -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="description">Descripción:</label>
+                      <input
+                        type="text"
+                        id="description_evet"
+                        name="description"
+                        class="form-control"
+                        placeholder="Descripción del servicio"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="how_long">Duración:</label>
+                      <input
+                        type="text"
+                        id="how_long_evet"
+                        name="how_long"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="home_appliances">Electrodomésticos:</label>
+                    <div
+                      id="home_appliances_container_edit"
+                      class="grid-checkboxes"
+                    >
+                      <!-- Checkboxes will be populated here -->
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-opt-pop-up footer-pop-up">
+                  <button
+                    type="button"
+                    class="btn-closet"
+                    onclick="closePopup()"
+                  >
+                    <i class="fa fa-times" aria-hidden="true"></i> &nbsp; Cerrar
+                  </button>
+                  <button type="submit" class="btn-submit">
+                    <i class="fa fa-save" aria-hidden="true"></i> &nbsp; Guardar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABLE  -->
+        <div class="container">
+          <h3 class="title-table">Usuarios</h3>
+          <div class="filters">
+            <input type="text" id="search" placeholder="Buscar..." />
+            <select id="role-filter">
+              <option value="0">Todos</option>
+              <!-- Opciones dinámicamente llenadas por JavaScript -->
+            </select>
+            <!-- <div class="date-picker">
+              <input type="date" id="start-date" name="start-date" />
+            </div>
+            <div class="date-picker">
+              <input type="date" id="end-date" name="end-date" />
+            </div>
+            <button class="submit-btn">Consultar</button> -->
+            <button id="open-create-popup" class="btn-submit">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="table-container">
+            <table id="user-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <th>Dirección</th>
+                  <th>Salario</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                  <th>Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Los datos se llenarán aquí con JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination" id="pagination">
+            <button id="prev">Anterior</button>
+            <div id="page-numbers"></div>
+            <button id="next">Siguiente</button>
+          </div>
+        </div>
+
+        <!-- modal edit  -->
+
+        <div id="edit-popup" class="modal">
+          <div class="modal-content">
+            <div class="header-pop-up">
+              <span class="close" onclick="closePopupUser()">&times;</span>
+              <h2>Editar Usuario</h2>
+            </div>
+
+            <form id="edit-form" class="container-inputs">
+              <div class="container-inputs">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name_p">Primer Nombre:</label>
+                    <input
+                      type="text"
+                      id="name_p"
+                      name="name_p"
+                      class="form-control"
+                      placeholder="Primer Nombre"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname_p">Apellido Paterno:</label>
+                    <input
+                      type="text"
+                      id="lastname_p"
+                      name="lastname_p"
+                      class="form-control"
+                      placeholder="Apellido Paterno"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name_s">Segundo nombre:</label>
+                    <input
+                      type="text"
+                      id="name_s"
+                      name="name_s"
+                      class="form-control"
+                      placeholder="Segundo Nombre"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lastname_m">Apellido Materno:</label>
+                    <input
+                      type="text"
+                      id="lastname_m"
+                      name="lastname_m"
+                      class="form-control"
+                      placeholder="Apellido Materno"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="type_document_id">Tipo de Documento:</label>
+                    <select
+                      id="type_document_id_edit"
+                      name="type_document_id"
+                      class="form-control type_document_id"
+                      required
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="number_phone_1">Teléfono 1:</label>
+                    <input
+                      type="number"
+                      id="number_phone_1"
+                      name="number_phone_1"
+                      class="form-control"
+                      placeholder="Número de Teléfono 1"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="number_document">Número de Documento:</label>
+                    <input
+                      type="number"
+                      id="number_document"
+                      name="number_document"
+                      class="form-control"
+                      placeholder="Número de Documento"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="number_phone_2">Teléfono 2:</label>
+                    <input
+                      type="number"
+                      id="number_phone_2"
+                      name="number_phone_2"
+                      class="form-control"
+                      placeholder="Número de Teléfono 2"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="gender_id">Género:</label>
+                    <select
+                      id="gender_id_edit"
+                      name="gender_id"
+                      class="form-control"
+                      required
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="birthdate">Fecha de Nacimiento:</label>
+                    <input
+                      type="date"
+                      id="birthdate"
+                      name="birthdate"
+                      class="form-control"
+                      placeholder="Fecha de Nacimiento"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="salary">Salario:</label>
+                    <input
+                      type="number"
+                      id="salary"
+                      name="salary"
+                      class="form-control"
+                      placeholder="Salario"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="rol_id">Rol:</label>
+                    <select
+                      id="rol_id_edit"
+                      name="rol_id"
+                      class="form-control rol_id"
+                      required
+                    >
+                      <!-- Opciones cargadas dinámicamente -->
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      class="form-control"
+                      placeholder="Dirección"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="code">Codigo:</label>
+                    <input
+                      type="number"
+                      id="code"
+                      name="code"
+                      class="form-control"
+                      minlength="3"
+                      required
+                      placeholder="Ingrese codigo."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="btn-opt-pop-up footer-pop-up">
+                <button type="button" class="btn-closet" onclick="closePopup()">
+                  <i class="fa fa-times" aria-hidden="true"></i> &nbsp; Cerrar
+                </button>
+                <button type="submit" class="btn-submit">
+                  <i class="fa fa-save" aria-hidden="true"></i>&nbsp; Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- crear  -->
+        <!-- Modal de Creación -->
+        <div id="create-popup" class="modal">
+          <div class="modal-content">
+            <div class="header-pop-up">
+              <span class="close" onclick="closeCreatePopupUser()"
+                >&times;</span
+              >
+              <h2>Crear Usuario</h2>
+            </div>
+            <form id="create-form">
+              <div class="container-inputs">
+                <div class="form-group">
+                  <label for="name_p">Primer Nombre:</label>
+                  <input
+                    type="text"
+                    id="name_p"
+                    name="name_p"
+                    class="form-control"
+                    minlength="3"
+                    required
+                    placeholder="Ingrese primer nombre"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="name_s">Segundo Nombre:</label>
+                  <input
+                    type="text"
+                    id="name_s"
+                    name="name_s"
+                    class="form-control"
+                    minlength="3"
+                    placeholder="Ingrese segundo nombre (opcional)"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastname_p">Apellido Paterno:</label>
+                  <input
+                    type="text"
+                    id="lastname_p"
+                    name="lastname_p"
+                    class="form-control"
+                    minlength="3"
+                    required
+                    placeholder="Ingrese apellido paterno"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastname_m">Apellido Materno:</label>
+                  <input
+                    type="text"
+                    id="lastname_m"
+                    name="lastname_m"
+                    class="form-control"
+                    minlength="3"
+                    placeholder="Ingrese apellido materno (opcional)"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="number_document">Número de Documento:</label>
+                  <input
+                    type="number"
+                    id="number_document"
+                    name="number_document"
+                    class="form-control"
+                    minlength="8"
+                    maxlength="9"
+                    required
+                    placeholder="Ingrese número de documento"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="type_document_id">Tipo de Documento:</label>
+                  <select
+                    id="type_document_id"
+                    name="type_document_id"
+                    class="form-control"
+                    required
+                  >
+                    <option value="dni">DNI</option>
+                    <!-- Más opciones pueden ser agregadas aquí -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    required
+                    placeholder="Ingrese correo electrónico"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="gender_id">Género:</label>
+                  <select
+                    id="gender_id"
+                    name="gender_id"
+                    class="form-control"
+                    required
+                  >
+                    <option value="gender">Género</option>
+                    <!-- Más opciones pueden ser agregadas aquí -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="birthdate">Fecha de Nacimiento:</label>
+                  <input
+                    type="date"
+                    id="birthdate"
+                    name="birthdate"
+                    class="form-control"
+                    required
+                    placeholder="YYYY-MM-DD"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="address">Dirección:</label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    class="form-control"
+                    minlength="8"
+                    required
+                    placeholder="Ingrese dirección"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="level_id">Nivel:</label>
+                  <select
+                    id="level_id"
+                    name="level_id"
+                    class="form-control"
+                    required
+                  >
+                    <!-- Opciones dinámicamente llenadas por JavaScript -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rol_id">Rol:</label>
+                  <select
+                    id="rol_id"
+                    name="rol_id"
+                    class="form-control"
+                    required
+                  >
+                    <!-- Opciones dinámicamente llenadas por JavaScript -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="number_phone_1">Número de Teléfono 1:</label>
+                  <input
+                    type="number"
+                    id="number_phone_1"
+                    name="number_phone_1"
+                    class="form-control"
+                    minlength="7"
+                    maxlength="9"
+                    required
+                    placeholder="Ingrese número de teléfono"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="number_phone_2">Número de Teléfono 2:</label>
+                  <input
+                    type="number"
+                    id="number_phone_2"
+                    name="number_phone_2"
+                    class="form-control"
+                    minlength="7"
+                    maxlength="9"
+                    placeholder="Ingrese número de teléfono (opcional)"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="salary">Sueldo:</label>
+                  <input
+                    type="number"
+                    id="salary"
+                    name="salary"
+                    class="form-control"
+                    minlength="3"
+                    required
+                    placeholder="Ingrese sueldo"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Contraseña:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    minlength="8"
+                    required
+                    placeholder="Ingrese contraseña"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="code">Codigo:</label>
+                  <input
+                    type="number"
+                    id="code"
+                    name="code"
+                    class="form-control"
+                    minlength="3"
+                    required
+                    placeholder="Ingrese codigo."
+                  />
+                </div>
+              </div>
+              <div class="container-button-create-user footer-pop-up">
+                <button type="submit" class="btn-submit">
+                  <i class="fa fa-plus" aria-hidden="true"></i>&nbsp; Crear
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="toast-container"></div>
+      </div>
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs"><b>Version</b> 1</div>
+        <strong
+          >Copyright &copy; 2024-2090
+          <a href="https://adminlte.io">Administrador de servicios</a>.</strong
+        >
+        Todos los derechos reservados.
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+    <script src="./../../dist/js/routes.js"></script>
+
+    <script src="./../../dist/js/custom.js"></script>
+
+    <script src="./../../dist/js/login.custom.js"></script>
+    <!-- jQuery 3 -->
+    <script src="./../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="./../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="./../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="./../../bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="./../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="./../../dist/js/demo.js"></script>
+    <script src="./../../dist/js/home.custom.js" defer></script>
+    <script src="./../../dist/js/calendar.js"></script>
+
+    <script src="./../../dist/js/login.custom.js"></script>
+  </body>
+</html>

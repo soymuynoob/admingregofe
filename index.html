@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Modal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./dist/css/custom.login.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-left">
+          <h1 class="modal-title">¡Bienvenido!</h1>
+          <p class="modal-desc">
+            Gestiona y coordina servicios técnicos de manera eficiente con
+            nuestro sistema de control de personal.
+          </p>
+          <div class="input-block">
+            <label for="email" class="input-label">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </div>
+          <div class="input-block">
+            <label for="password" class="input-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="modal-buttons">
+            <a href="#" onclick="openForgotPasswordPopup()"
+              >¿Olvidaste tu contraseña?</a
+            >
+            <button class="input-button" id="submit">Iniciar</button>
+          </div>
+          <div class="container-spinner"><div class="loader"></div></div>
+
+          <div id="error-message" style="color: red"></div>
+        </div>
+        <div class="modal-right">
+          <img
+            src="./dist/img/4 Top Roles Of Appliance Repairman In Toronto.jpeg"
+            alt=""
+          />
+        </div>
+        <button class="icon-button close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+            <path
+              d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <button class="modal-button">Haga clic aquí para iniciar sesión</button>
+    </div>
+
+    <!-- Pop-up de Olvido de Contraseña -->
+    <div class="forgot-password-popup" id="forgotPasswordPopup">
+      <div class="close-popup" onclick="closeForgotPasswordPopup()">X</div>
+      <h2>Cambio de Contraseña</h2>
+      <div class="input-block">
+        <label for="forgot-email" class="input-label"
+          >Correo Electrónico:</label
+        >
+        <input type="email" id="forgot-email" placeholder="Ingrese su correo" />
+      </div>
+      <div class="input-block">
+        <label for="verification-code" class="input-label"
+          >Código de Verificación:</label
+        >
+        <input
+          type="text"
+          id="verification-code"
+          placeholder="Ingrese el código de verificación"
+          maxlength="4"
+        />
+      </div>
+      <div class="input-block">
+        <label for="new-password" class="input-label">Nueva Contraseña:</label>
+        <input
+          type="password"
+          id="new-password"
+          placeholder="Ingrese nueva contraseña"
+        />
+      </div>
+      <div class="input-block">
+        <label for="confirm-password" class="input-label"
+          >Confirmar Contraseña:</label
+        >
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Confirme nueva contraseña"
+        />
+      </div>
+      <button class="input-button" onclick="submitForgotPassword()">
+        Enviar
+      </button>
+      <div id="forgot-error-message" class="p-1 changeError"></div>
+      <div id="success-message" class="p-1 changeSuccess"></div>
+    </div>
+
+    <script></script>
+    <script src="./dist/js/login.custom.js"></script>
+  </body>
+</html>

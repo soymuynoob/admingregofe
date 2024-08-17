@@ -1,0 +1,430 @@
+.contentBox {
+  min-height: auto;
+  width: 87%;
+  max-width: 1225px;
+}
+
+/* General styles table */
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Encabezado y título */
+.title-table {
+  margin-bottom: 20px;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los filtros se envuelvan en pantallas pequeñas */
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search,
+#role-filter {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 1; /* Permite que los filtros se expandan y se ajusten */
+  max-width: 200px; /* Establece un ancho máximo */
+}
+
+/* Tabla */
+.table-container {
+  overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.optionsTable {
+  display: flex;
+  gap: 5px; /* Espacio entre los íconos de opciones */
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  flex-wrap: wrap; /* Permite que la paginación se ajuste en pantallas pequeñas */
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.pagination span,
+.pagination button {
+  padding: 5px 7px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination span.active,
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* .pagination span:hover,
+.pagination button:hover {
+  background-color: #f0f0f0;
+} */
+
+/* Botones */
+button {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #FFFF;
+}
+
+button:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #search,
+  #role-filter {
+    width: 100%;
+    max-width: none; /* Elimina el ancho máximo en pantallas pequeñas */
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .pagination span,
+  .pagination button {
+    font-size: 14px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}
+
+/* Modal Estilos */
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  /* padding: 20px; */
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.modal-content form .container-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header-pop-up {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Borde delgado y casi transparente */
+  padding: 20px 20px 10px 20px;
+}
+.footer-pop-up {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Borde delgado y casi transparente */
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form-row {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input[class="form-control"],
+select[class="form-control"],.form-control{
+  width: 100%;
+  max-width: 260px;
+  border-radius: 5px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333bb;
+}
+
+.form-control {
+  width: 100%;
+  /* padding: 10px; */
+  box-sizing: border-box;
+}
+.container-button-create-user {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.btn-closet {
+  background-color: rgba(227, 68, 68, 0.797);
+}
+
+.btn-closet:hover {
+  background-color: rgb(164, 36, 36);
+  border: none;
+}
+
+.btn-opt-pop-up {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.btn-opt-pop-up > button,
+.container-button-create-user > button {
+  padding: 10px;
+  /* width: 75px; */
+}
+.btn-submit {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para formulario de dos columnas */
+
+.form-group {
+  flex: 1 1 45%;
+  margin-right: 10px;
+}
+
+.form-group:nth-child(2n) {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+  input[class="form-control"],
+  select[class="form-control"] {
+    max-width: 100%;
+  }
+  .form-row {
+    padding: 5px;
+  }
+}
+
+
+/* toas */
+/* styles.css */
+/* Estilo para el contenedor de toasts */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 300px;
+}
+
+/* Estilo general para el toast */
+.toast {
+  position: relative;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid transparent;
+}
+
+/* Barra de temporizador */
+.timer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #f39c12;
+  /* transition: width 1s linear; */
+}
+
+/* Estilos para mensajes de error */
+.toast.error {
+  background-color: #e74c3c;
+  border-bottom-color: #c0392b;
+}
+
+/* Estilos para mensajes de éxito */
+.toast.success {
+  background-color: #2ecc71;
+  border-bottom-color: #27ae60;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mb-2 {
+  margin-bottom: 50px;
+}
+
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.grid-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-checkboxes input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.create-ticket-button {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  background-color: #4caf50;
+}
+.container-button-create-ticket{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.small-box .bg-red,.bg-red{
+  background-color: #3ccbbc !important;
+}
+.active-main{
+  background-color: black;
+}
+
+/* lista de numeros de los clientes */
+.dropdown-list {
+  /* Estilos de la lista desplegable */
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #e0e0e0; /* Color de fondo en hover */
+}
